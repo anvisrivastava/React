@@ -4,7 +4,7 @@ import Cricket from './components/Cricket.js';
 
 function Header(){
     return(
-        <h1>I am from header component and i m pushing my code</h1>
+        <h1>I am from header component and i m pushing my changes</h1>
     )
 }
 
