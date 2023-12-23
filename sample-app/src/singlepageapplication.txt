@@ -1,0 +1,56 @@
+1)single page application
+SPA will have the main page loaded once and then the sub page sections will be changing without any refresh
+SPA is the modern way of the web development which will be fast and responsive
+
+2)multi page application
+Entire page will be getting reloaded everytime
+traditional approach
+
+
+
+Notes to confugure the Routes
+
+1) Thie first step to configure the router is giving a top level or hige order component names <BorowserRouter>
+2) All the routers and components will be wrapped inside the <BrowserRouter> component as it will store
+the clear URL's internally, using which we actually route through all the components means entire application
+
+Meaning route -> navigating from one page to another page
+
+a) <BrowserRouter
+example:
+ReactDOM.creatRoot(el).render(
+<BrowserRouter>
+<App/>
+</BrowserRouter>
+);
+
+b) We need to import import { Route, Routes } from 'react-router-dom';
+
+c)to  show the child routes into our application we have to use >outlet />
+
+
+
+
+-----------------------------------------------
+
+index attribute which will refers to the parent Route "index attribute will point the  route to
+ its parent default value will be true for the index in the Routes <Route index element ={<Home />} />
+
+ d) contect and useOutletContext(): passing data to the child component
+
+ If wanted to sharethe sate, like sharing the data from the child component we have to use an callled "context"
+ that can we used in the <Outlet /> component<Outlet context -
+ {object} />
+ with the context attribute we can pass the data as the Object Literal
+
+ The object is passed to the child component and to refer the assed data inside the child component we have 
+ to use useOutletContext()hook(function)
+
+
+//useOutletContext() hook help to get the data which is passed with the "context" attribute inside the <Outlet /> component
+
+
+
+
+
+
