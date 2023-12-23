@@ -1,35 +1,28 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {CricketerData} from "./data.js";
-import Cricket from './components/Cricket.js';
-
-function Header(){
-    return(
-        <h1>I am from header component and i m pushing my changes</h1>
-    )
-}
-
-function App(){
-    return(
-        <>
-         <h1>Hi i am from app component</h1>
-         <h1><Header /></h1>
-         <ul>
-            <Cricket 
-            name ={CricketerData[0].name}
-            description ={CricketerData[0].description}
-            image ={CricketerData[0].image}
-            />
-            <Cricket 
-            {...CricketerData[1]}
-            />
-             <Cricket 
-             {...CricketerData[2]}
-             />
-             <Cricket
-              {...CricketerData[3]}
-             />
-         </ul>
-         </> 
-    )
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Player from './components/Player';
+import Ipl from './components/Ipl';
+import Cricket from './components/Cricket';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+const App = () => {
+return(
+    <>
+    <BrowserRouter>
+    <Header />
+    <div className='container'>
+        <Routes>
+            <Route path = "/" element = {<Cricket/>}></Route>
+            <Route path = "/player" element = {<Player/>}></Route>
+            <Route path = "/ipl" element = {<Ipl/>}></Route>
+        </Routes>
+    </div>
+    </BrowserRouter>
+    </>
+)
 }
 export default App;
+
+
+
+
+
