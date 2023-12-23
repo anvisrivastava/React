@@ -1,14 +1,21 @@
-function Cricket({name,description,image}){
-    //const name=props.name;
-    //const description =props.description;
-    //const image =props.image;
-    //const{name,description,image}=props;
+
+const Cricket =() => {
     return(
-        <li>
-            <p>{name}</p>
-            <p>{description}</p>
-            <p><img src={image} classNmame="img-thumbnail rounded mx-auto d-block" alt={name}/></p>
-        </li>
+        <div className="container">
+        <div className="col-md-12 mt-5">
+            <form>
+                <label htmlFor="firstname">First name</label>
+                <input
+                className="form-control"
+                type="text"
+                name="firstname"
+                />
+
+                <hr className="mb-4" />
+                <button className="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+            </form>
+        </div>
+        </div>
     )
 }
-export default Cricket;
+export default Cricket
